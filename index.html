@@ -18,6 +18,46 @@
     body {
       background-color: #0d1b16;
       color: #ffffff;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #132d23;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: #a2facf;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffffff;
+    }
+
+    main {
       padding: 2rem;
     }
 
@@ -95,54 +135,81 @@
   </style>
 </head>
 <body>
-  <section class="card">
+
+  <nav>
     <h1>Nitish Vankina</h1>
-    <p>Hi! I am Nitish Vankina. I was born and raised in North Virginia where I always had a good time. As a kid, I would spend my evenings reading or out playing with my friends in the neighborhood. As I grew older, I developed a strong interest in foil fencing. I would spend my evenings fencing at my fencing club with a few friends. When I'm not fencing, you can find me either coding or tinkering with my Raspberry Pi. On weekends, I tend to my little garden where I grow mint, rosemary, and other household plants.</p>
-  </section>
+    <ul>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#interests">Interests</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#summaries">Summaries</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <section class="card">
-    <h2>Education</h2>
-    <p>Colin Powell Elementary<br>
-       Liberty Middle School<br>
-       Centreville High School</p>
-  </section>
+  <main>
+    <section class="card">
+      <p>Hi! I am Nitish Vankina. I was born and raised in North Virginia where I always had a good time. As a kid, I would spend my evenings reading or out playing with my friends in the neighborhood. As I grew older, I developed a strong interest in foil fencing. I would spend my evenings fencing at my fencing club with a few friends. When I'm not fencing, you can find me either coding or tinkering with my Raspberry Pi. On weekends, I tend to my little garden where I grow mint, rosemary, and other household plants.</p>
+    </section>
 
-  <section class="card">
-    <h2>Interests</h2>
-    <p>Foil fencing, coding, Raspberry Pi projects, video games, reading, watching shows and movies, playing chess.</p>
-  </section>
+    <section class="card" id="education">
+      <h2>Education</h2>
+      <p>Colin Powell Elementary<br>
+        Liberty Middle School<br>
+        Centreville High School</p>
+    </section>
 
-  <section class="card">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:nvankina24@gmail.com">nvankina24@gmail.com (MailTo might not work for certain browsers)</a></p>
-    <p>GitHub: <a href="https://github.com/" target="_blank">github.com</a></p>
-  </section>
- 
-  <section class="card">
-  <h2>Project Summaries</h2>
-  <p><strong>Medicinal Gardening:</strong> I explored the benefits of growing plants with known medicinal properties like aloe vera, mint, and turmeric. I created a small garden and observed how these plants thrive, and began testing how effective they are for treating small everyday issues like skin irritation or digestion.</p>
+    <section class="card" id="interests">
+      <h2>Interests</h2>
+      <p>Foil fencing, coding, Raspberry Pi projects, video games, reading, watching shows and movies, playing chess.</p>
+    </section>
 
-  <!-- Add more project summaries below -->
-</section>
+    <section class="card" id="awards">
+      <h2>Awards</h2>
+      <p>🏅 FBLA Regional Placement – Business Leadership 2024<br>
+         🧠 Brain Bee Participant – 2025<br>
+         🌱 School Science Fair – Biology Category Winner, 2023
+      </p>
+    </section>
 
+    <section class="card" id="summaries">
+      <h2>Project Summaries</h2>
+      <p><strong>Medicinal Gardening:</strong> I explored the benefits of growing plants with known medicinal properties like aloe vera, mint, and turmeric. I created a small garden and observed how these plants thrive, and began testing how effective they are for treating small everyday issues like skin irritation or digestion.</p>
+      <!-- Add more summaries here -->
+    </section>
 
-  <section class="card">
-    <h2>Projects</h2>
-    <div class="project-gallery">
-      <a href="https://augustonline.github.io/MedicinalGarden/" class="project" target="_blank">
-        <img src="https://augustonline.github.io/Portfolio/images/IMG_6182.jpeg" alt="Project 1" width="150px" height="150px">
-        <div class="project-desc">
-          <p>A small project I started to learn more about medicinal gardening. I have always grown up in a household who tried to use natural methods as much as possible. And one day I decided to test this out. I started a garden with many plants that are known for their medical benefits.</p>
-        </div>
-      </a>
-      <a href="https://example.com/project2" class="project" target="_blank">
-        <img src="https://via.placeholder.com/300x200" alt="Project 2">
-        <div class="project-desc">
-          <p></p>
-        </div>
-      </a>
-      <!-- Add more project entries here as you create them -->
-    </div>
-  </section>
+    <section class="card" id="experience">
+      <h2>Experience</h2>
+      <p>👟 <strong>Asha Jyothi 5K Volunteer</strong> (2023–Present)<br>
+         🍛 <strong>Anna Sudha Community Kitchens Volunteer</strong> (2023–2025)</p>
+    </section>
+
+    <section class="card" id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:nvankina24@gmail.com">nvankina24@gmail.com</a> <span style="font-size: 0.9em;">(MailTo might not work for certain browsers)</span></p>
+      <p>GitHub: <a href="https://github.com/" target="_blank">github.com</a></p>
+    </section>
+
+    <section class="card">
+      <h2>Projects</h2>
+      <div class="project-gallery">
+        <a href="https://augustonline.github.io/MedicinalGarden/" class="project" target="_blank">
+          <img src="https://augustonline.github.io/Portfolio/images/IMG_6182.jpeg" alt="Project 1">
+          <div class="project-desc">
+            <p>A small project I started to learn more about medicinal gardening. I have always grown up in a household who tried to use natural methods as much as possible. And one day I decided to test this out. I started a garden with many plants that are known for their medical benefits.</p>
+          </div>
+        </a>
+        <a href="https://example.com/project2" class="project" target="_blank">
+          <img src="https://via.placeholder.com/300x200" alt="Project 2">
+          <div class="project-desc">
+            <p></p>
+          </div>
+        </a>
+        <!-- Add more project entries here as you create them -->
+      </div>
+    </section>
+  </main>
+
 </body>
 </html>
