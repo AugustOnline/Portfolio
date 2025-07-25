@@ -3,104 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nitish Vankina - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>Nitish Vankina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
       font-family: 'Inter', sans-serif;
     }
 
     body {
-      background-color: #0a0f0a;
+      background-color: #0d1b16;
       color: #ffffff;
-      line-height: 1.6;
       padding: 2rem;
     }
 
     h1, h2 {
-      color: #90ee90;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
     }
 
-    header {
-      text-align: center;
+    p {
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    section {
       margin-bottom: 3rem;
     }
 
-    .section {
-      background-color: #112011;
-      border: 1px solid #234323;
-      border-radius: 12px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .card {
+      background-color: #132d23;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
     }
 
-    .section:hover {
+    .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
 
     a {
-      color: #90ee90;
+      color: #a2facf;
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
 
-    .contact a {
-      display: inline-block;
-      margin-right: 1rem;
-      margin-top: 0.5rem;
+    .project {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+      cursor: pointer;
+    }
+
+    .project img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover img {
+      transform: scale(1.05);
+    }
+
+    .project-desc {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem;
+      background: rgba(13, 27, 22, 0.9);
+      color: white;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .project:hover .project-desc {
+      transform: translateY(0);
     }
   </style>
 </head>
 <body>
-  <header>
+  <section class="card">
     <h1>Nitish Vankina</h1>
-    <p>Foil Fencer | Coder | Tinkerer</p>
-  </header>
-
-  <section class="section about">
-    <h2>About Me</h2>
-    <p>
-      Hi! I am Nitish Vankina. I was born and raised in Northern Virginia where I always had a good time.
-      As a kid, I would spend my evenings reading or out playing with my friends in the neighborhood.
-      As I grew older, I would develop a strong interest in foil fencing. I would spend my evenings fencing at my fencing club with a few friends.
-      When I'm not fencing, you can find me either coding or tinkering with my Raspberry Pi.
-      On weekends, I tend to my little garden where I grow mint, rosemary, and other household plants.
-    </p>
+    <p>Hi! I am Nitish Vankina. I was born and raised in North Virginia where I always had a good time. As a kid, I would spend my evenings reading or out playing with my friends in the neighborhood. As I grew older, I developed a strong interest in foil fencing. I would spend my evenings fencing at my fencing club with a few friends. When I'm not fencing, you can find me either coding or tinkering with my Raspberry Pi. On weekends, I tend to my little garden where I grow mint, rosemary, and other household plants.</p>
   </section>
 
-  <section class="section interests">
-    <h2>Interests</h2>
-    <ul>
-      <li>Foil Fencing</li>
-      <li>Coding and Raspberry Pi projects</li>
-      <li>Reading and Chess</li>
-      <li>Video Games and TV Shows</li>
-      <li>Gardening</li>
-    </ul>
-  </section>
-
-  <section class="section education">
+  <section class="card">
     <h2>Education</h2>
-    <ul>
-      <li>Colin Powell Elementary School</li>
-      <li>Liberty Middle School</li>
-      <li>Centreville High School</li>
-    </ul>
+    <p>Colin Powell Elementary<br>
+       Liberty Middle School<br>
+       Centreville High School</p>
   </section>
 
-  <section class="section contact">
+  <section class="card">
+    <h2>Interests</h2>
+    <p>Foil fencing, coding, Raspberry Pi projects, video games, reading, watching shows and movies, playing chess.</p>
+  </section>
+
+  <section class="card">
     <h2>Contact</h2>
-    <a href="mailto:mr.freelancer9182@gmail.com">Email</a>
-    <a href="https://github.com/AugustOnline/" target="_blank">GitHub</a>
+    <p>Email: <a href="mailto:mr.freelancer9182@gmail.com">mr.freelancer9182@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/" target="_blank">github.com</a></p>
+  </section>
+
+  <section class="card">
+    <h2>Projects</h2>
+    <div class="project-gallery">
+      <a href="https://example.com/project1" class="project" target="_blank">
+        <img src="https://nitishvankina.github.io/portfolio/images/IMG_6182.jpeg" alt="Project 1">
+        <div class="project-desc">
+          <p>A small project I started to learn more about medicinal gardening.</p>
+        </div>
+      </a>
+      <a href="https://example.com/project2" class="project" target="_blank">
+        <img src="https://via.placeholder.com/300x200" alt="Project 2">
+        <div class="project-desc">
+          <p></p>
+        </div>
+      </a>
+      <!-- Add more project entries here as you create them -->
+    </div>
   </section>
 </body>
 </html>
